@@ -1,7 +1,40 @@
 const storeForm = document.getElementById('store-form');
 const storeId = document.getElementById('store-id');
 const storeAddress = document.getElementById('store-address');
-c
+const selectList = document.getElementById("results-select");
+
+storeAddress.addEventListener('input', function (event) {
+  const query = event.target.value;
+  const endpoint = 'https://www.mapquestapi.com/search/v3/prediction';
+  const apiKey = xxxx;
+  const location = '34.3088,31.3547';  
+
+  const url = `${endpoint}?key=${apiKey}&q=${query}&collection=address&location=${location}`;
+  
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const results = data.results;
+    
+      if (Array.isArray(results)) {
+        selectList.innerHTML = "";
+        for (const result of results) {
+          const option = document.createElement('option');
+          option.text = result.displayString;
+          option.value = result.id;
+          selectList.add(option);
+        }
+      }
+    })
+    .catch(error => console.error(error));
+});
+
+selectList.addEventListener("change", () => {
+  const selectedOptions = Array.from(selectList.selectedOptions);
+  console.log(selectedOptions)
+  const values = selectedOptions.map(option => option.label);
+  storeAddress.value = values.join(", ");
+});
 
 // Send POST to API to add store
 async function addStore(e) {
@@ -23,7 +56,7 @@ async function addStore(e) {
 
   try {
     const res = await fetch('/api/v1/stores', {
-      method: 'POST',
+      method: 'POST',         
       headers: {
         'Content-Type': 'application/json'
       },
@@ -54,4 +87,4 @@ async function addStore(e) {
   }
 }
 
-storeForm.addEventListener('submit', addStore);
+storeForm.addEventListener('submit', addStore);;
