@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <title>Store Locator - Add Store</title>
-  </head>
-  <body>
-    <div class="container my-3">
-      <h1 class="display-4 text-center">
-        Add Store
-      </h1>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
 
-      <form id="store-form" class="mb-4">
-        <div class="form-group">
-          <label for="store-id">Store ID</label>
-          <input type="text" id="store-id" class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="store-address">Store Address</label>
-          <input type="text" id="store-address" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="index.html" class="btn btn-secondary">Back</a>
-      </form>
-    </div>
+  <title>Store Locator - Add Store</title>
+  <style>
+    #results-select {
+      height: 150px; /* set the desired height */
+      overflow-y: scroll; /* enable scrolling */
+    }
+  </style>
+</head>
 
-    <script src="js/add.js"></script>
-  </body>
+<body>
+  <div class="container my-3">
+    <h1 class="display-4 text-center">
+      Add Store
+    </h1>
+
+    <form id="store-form" class="mb-4">
+      <div class="form-group">
+        <label for="store-id">Store ID</label>
+        <input type="text" id="store-id" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="store-address">Store Address</label>
+        <input type="text" id="store-address" class="form-control" />
+        <select id="results-select" class="form-control" multiple>
+        </select>
+      </div>      
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="index.html" class="btn btn-secondary">Back</a>
+    </form>
+  </div>
+
+  <script src="js/add.js"></script>
+</body>
+
 </html>
+
+<!--
+  Jamal Abdul Nasser st.,Gaza, 7683400, Palestine
+  تقاطع شارع بيروت مع شارع جامعة الدول العربية غزة فلسطين
+  GC3J+HCW, Alwehda private school - Palestine, Gaza Strip
+  شارع الدوحة- دوار ابو مازن - رمال جنوبي - غزة - فلسطين
+  FCF4+5M2, Azza, Jerusalem
+  southern rimal palestine 	72372
+  217/2070 Jamal Abdul Nasser st., Gaza, PS
+  Doha street - southern rimal - gaza strip, palestine
+-->
+
+<!--
+  9GHM+JW Netivot, Israel
+  Hahita St 12, Sitria, 7683400, Israel
+-->
+
+<!--
+  {address: '29 champs elysée', country: 'France', zipcode: '75008'}
+-->
