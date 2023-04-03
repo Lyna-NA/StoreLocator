@@ -10,7 +10,7 @@
 
 ## Quick Start
 
-Add your MONGO_URI and GEOCODER_API_KEY to the "config/config.env" file.
+> Add your MONGO_URI and GEOCODER_API_KEY to the "config/config.env" file.
 
 ```bash
 # Install dependencies
