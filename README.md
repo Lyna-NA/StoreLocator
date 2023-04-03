@@ -4,12 +4,9 @@
 
 
 - The project allows users to input a store address and have the app automatically convert the address to coordinates and then mark the location on the map.
+- The app uses the [MapQuest prediction endpoint](https://developer.mapquest.com/documentation/searchahead-api/get) to provide real-time suggestions as the user types in their address. 
 - The app uses Node Geocoder to perform the geocoding process, and then stores the coordinates in the database using Mongoose pre-middleware.
 - The front-end of the app uses Vanilla JavaScript and OpenLayers to display the map and plot the store locations. 
-
-
-## The static web was hosted on firebase
-> You can follow the link to view the app:  https://storelocator-52617.web.app/
 
 ## Quick Start
 
